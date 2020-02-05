@@ -1,0 +1,103 @@
+html,
+body {
+  padding: 0;
+  margin: 0 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Default white text for dark background */
+h1 {
+  color: #FFFFFF;
+  font-family: "Noe Display";
+  font-style: normal;
+  font-weight: 500;
+}
+
+p, a {
+  color: #FFFFFF;
+  font-family: "Proxima Nova";
+}
+
+/* This is the container for the panel, stretching the entire viewport */
+.panel {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: gray;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* This is the container for the content, it has a two column margin and a max-width so content does not get unwieldly */
+.panel__content {
+  height: 100%;
+  width: calc(100% * 10/12);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.panel__text {
+  width: calc(100% * 10/12);
+}
+
+.panel__arrow {
+  position: relative;
+  top: 50%;
+  left: calc(100% - 100px);
+  transform: translateY(-50%);
+}
+
+.sample-bar {
+  background-color: green;
+  width: 100%;
+  height: 20px;
+}
+
+.nav {
+  width: 100%;
+  text-align: justify;
+  position: absolute;
+  bottom: 70px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Used to make the nav items take up the whole width */
+.nav:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.nav__item {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.nav__link {
+  text-decoration: none;
+}
+
+.panel.panel--home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(https://s3-alpha-sig.figma.com/img/175c/54d5/a185cd2186f4605d737fe98c68f573f4?Expires=1581292800&Signature=UHlYi7K92hNA4i899UBZa8znDDQsRdx~koBVctiFPh5ESwd-kv-NatelTCx4PGxpUZ7gb7MtCXcuQE01yUmhp9Vr9ZCW2IC6Urqy6S3I~vzBOiYbfSMbgkJtAQRCBMzR~myIH4D8OAWYWlPPqwQ8wi7tj9yAYc06txdeM5XEfC1jTgqcrRPpanZohAM4IPSmvYTzT54MSvixFoXLicJPbqJ-dsHd-288MXRBxW7ej1Od0ZNNGINN8pWxNWV7BBCMlULCw5A73CruiBpxdOaRrV04HM5PWwxsx-wD5ZhY7UWDxXTJbw0d4x-XEEswGxVgQj0el7TbvjXKj9V0fE4sHw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+}
+
+.panel--home .panel__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.panel--home .panel__text {
+  font-size: 60px;
+  line-height: 75px;
+}
