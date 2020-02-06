@@ -85,6 +85,12 @@ p, a {
   text-decoration: none;
 }
 
+.logo {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+
 .panel.panel--home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(https://s3-alpha-sig.figma.com/img/175c/54d5/a185cd2186f4605d737fe98c68f573f4?Expires=1581292800&Signature=UHlYi7K92hNA4i899UBZa8znDDQsRdx~koBVctiFPh5ESwd-kv-NatelTCx4PGxpUZ7gb7MtCXcuQE01yUmhp9Vr9ZCW2IC6Urqy6S3I~vzBOiYbfSMbgkJtAQRCBMzR~myIH4D8OAWYWlPPqwQ8wi7tj9yAYc06txdeM5XEfC1jTgqcrRPpanZohAM4IPSmvYTzT54MSvixFoXLicJPbqJ-dsHd-288MXRBxW7ej1Od0ZNNGINN8pWxNWV7BBCMlULCw5A73CruiBpxdOaRrV04HM5PWwxsx-wD5ZhY7UWDxXTJbw0d4x-XEEswGxVgQj0el7TbvjXKj9V0fE4sHw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
 }
@@ -100,4 +106,31 @@ p, a {
 .panel--home .panel__text {
   font-size: 60px;
   line-height: 75px;
+}
+
+.signup-row {
+  height: 200px;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: "Noe Display";
+    src: url("fonts/Noe/Noe Display/NoeDisplay-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noe Display";
+    font-weight: bold;
+    src: url("fonts/Noe Display Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("fonts/ProximaNova/Proxima Nova/Proxima Nova Regular.otf") format("opentype");
 }
