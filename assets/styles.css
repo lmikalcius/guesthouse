@@ -1,8 +1,11 @@
 html,
 body {
+  color: #FFFFFF;
   padding: 0;
   margin: 0 0;
-}
+/*  overflow-x: hidden;
+  overflow-y: visible;
+*/}
 
 * {
   box-sizing: border-box;
@@ -10,22 +13,22 @@ body {
 
 /* Default white text for dark background */
 h1 {
-  color: #FFFFFF;
   font-family: "Noe Display";
   font-style: normal;
   font-weight: 500;
 }
 
 p, a {
-  color: #FFFFFF;
   font-family: "Proxima Nova";
 }
 
+.panel.panel--dark {
+  color: #333333;
+}
 /* This is the container for the panel, stretching the entire viewport */
 .panel {
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: gray;
   background-repeat:no-repeat;
   background-position: center center;
@@ -50,6 +53,10 @@ p, a {
   top: 50%;
   left: calc(100% - 50px);
   transform: translateY(-50%);
+}
+
+.panel--dark .panel__right-arrow {
+  filter: invert(14%) sepia(5%) saturate(6%) hue-rotate(330deg) brightness(14%) contrast(85%);
 }
 
 .sample-bar {
@@ -77,13 +84,13 @@ p, a {
 
 .nav__item {
   display: inline-block;
-  font-weight: 600;
   font-size: 20px;
   line-height: 30px;
 }
 
 .nav__link {
   text-decoration: none;
+  color: #FFFFFF;
 }
 
 .logo {
@@ -173,6 +180,7 @@ p, a {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/home-page-2.png");
 }
 
+
 .panel--description .panel__content {
   display: flex;
   align-items: center;
@@ -185,4 +193,21 @@ p, a {
   font-size: 50px;
   line-height: 65px;
   width: calc(100% * 8/12);
+}
+
+.panel.panel--beta-stays {
+  background: #D9B17F;
+}
+
+.panel--beta-stays .panel__content {
+  text-align: center;
+  position: relative;
+  padding-top: 240px
+}
+
+.panel--beta-stays .panel__text {
+  font-size: 50px;
+  line-height: 65px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
