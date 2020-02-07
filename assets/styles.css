@@ -44,8 +44,17 @@ p, a {
   position: relative;
 }
 
-.panel__text {
+.panel__header {
   width: calc(100% * 10/12);
+}
+
+.panel__text {
+  text-align: center;
+  margin: 50px auto 0 auto;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  line-height: 34px;
+  width: calc(100% * 8/12);
 }
 
 .panel__right-arrow {
@@ -110,18 +119,18 @@ p, a {
   text-align: center;
 }
 
-.panel--home .panel__text {
+.panel--home .panel__header {
   font-size: 60px;
   line-height: 75px;
 }
 
-.signup-bar {
+.hero {
   height: 200px;
   width: 100%;
   background-color: #FFFFFF;
 }
 
-.signup-bar__text {
+.hero__text {
   color: #000000;
   text-align: center;
   padding-top: 40px;
@@ -129,6 +138,35 @@ p, a {
   font-family: "Proxima Nova";
   font-size: 24px;
   line-height: 34px;
+}
+
+.footer {
+  margin: 0 auto;
+  height: 150px;
+  width: 100%;
+  background-color: #FFFFFF;
+  width: calc(100% * 10/12);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.footer__text {
+  color: #000000;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer__icon {
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 40px);
+  transform: translateY(-50%);
+}
+
+.footer__icon.--left {
+  left: calc(100% - 130px);
 }
 
 .email-form {
@@ -189,7 +227,7 @@ p, a {
   position: relative;
 }
 
-.panel--description .panel__text {
+.panel--description .panel__header {
   font-size: 50px;
   line-height: 65px;
   width: calc(100% * 8/12);
@@ -205,7 +243,41 @@ p, a {
   padding-top: 240px
 }
 
-.panel--beta-stays .panel__text {
+.panel--beta-stays .panel__header {
+  font-size: 50px;
+  line-height: 65px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.panel.panel--locations {
+  background: #333333;
+}
+
+.panel--locations .panel__content {
+  text-align: center;
+  position: relative;
+  padding-top: 240px
+}
+
+.panel--locations .panel__header {
+  font-size: 50px;
+  line-height: 65px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.panel.panel--mission {
+  background: #E7E7E7;
+}
+
+.panel--mission .panel__content {
+  text-align: center;
+  position: relative;
+  padding-top: 240px
+}
+
+.panel--mission .panel__header {
   font-size: 50px;
   line-height: 65px;
   margin: 0 auto;
