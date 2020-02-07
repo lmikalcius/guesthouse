@@ -38,16 +38,17 @@ p, a {
   width: calc(100% * 10/12);
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .panel__text {
   width: calc(100% * 10/12);
 }
 
-.panel__arrow {
-  position: relative;
+.panel__right-arrow {
+  position: absolute;
   top: 50%;
-  left: calc(100% - 100px);
+  left: calc(100% - 50px);
   transform: translateY(-50%);
 }
 
@@ -92,7 +93,7 @@ p, a {
 }
 
 .panel.panel--home {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(https://s3-alpha-sig.figma.com/img/175c/54d5/a185cd2186f4605d737fe98c68f573f4?Expires=1581292800&Signature=UHlYi7K92hNA4i899UBZa8znDDQsRdx~koBVctiFPh5ESwd-kv-NatelTCx4PGxpUZ7gb7MtCXcuQE01yUmhp9Vr9ZCW2IC6Urqy6S3I~vzBOiYbfSMbgkJtAQRCBMzR~myIH4D8OAWYWlPPqwQ8wi7tj9yAYc06txdeM5XEfC1jTgqcrRPpanZohAM4IPSmvYTzT54MSvixFoXLicJPbqJ-dsHd-288MXRBxW7ej1Od0ZNNGINN8pWxNWV7BBCMlULCw5A73CruiBpxdOaRrV04HM5PWwxsx-wD5ZhY7UWDxXTJbw0d4x-XEEswGxVgQj0el7TbvjXKj9V0fE4sHw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/home-page.png");
 }
 
 .panel--home .panel__content {
@@ -100,7 +101,6 @@ p, a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
 }
 
 .panel--home .panel__text {
@@ -108,14 +108,48 @@ p, a {
   line-height: 75px;
 }
 
-.signup-row {
+.signup-bar {
   height: 200px;
   width: 100%;
   background-color: #FFFFFF;
 }
 
+.signup-bar__text {
+  color: #000000;
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 0px;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  line-height: 34px;
+}
 
+.email-form {
+  text-align: center;
+}
 
+.email-form__input {
+  width: 595px;
+  height: 50px;
+  margin-top: 25px;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+  padding: 0 24px;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  line-height: 12px;
+  margin-right: 10px;
+}
+
+.email-form__submit {
+  background: #B6824B;
+  border-radius: 4px;
+  width: 192px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 12px;
+  color: #FFFFFF;
+}
 
 
 
@@ -133,4 +167,22 @@ p, a {
 @font-face {
     font-family: "Proxima Nova";
     src: url("fonts/ProximaNova/Proxima Nova/Proxima Nova Regular.otf") format("opentype");
+}
+
+.panel.panel--description {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/home-page-2.png");
+}
+
+.panel--description .panel__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.panel--description .panel__text {
+  font-size: 50px;
+  line-height: 65px;
+  width: calc(100% * 8/12);
 }
