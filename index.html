@@ -2,59 +2,70 @@
 <head>
   <title>Guesthouse</title>
   <link rel="stylesheet" type="text/css" href="assets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 </head>
 <body>
   <div class="panel panel--home">
     <div class="panel__content">
       <img class="logo" src="assets/svg/logo.svg">
-      <h1 class="panel__header">Guesthouse is the first purpose-built hospitality experience designed for busy teams.</h1>
-      <ul class="nav">
-        <li class="nav__item"><a class="nav__link" href="#">What is Guesthouse?</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Where we are</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Beta Stays</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Our Mission</a></li>
+      <h1 class="panel__header">The first purpose-built hospitality experience designed for big ideas.</h1>
+      <img class="panel__arrow--down" src="assets/svg/panel-right-arrow.svg">
+      <ul class="nav" id="nav">
+        <li onclick="scrollToPanel('description'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#description">What is Guesthouse?</a></li>
+        <li onclick="scrollToPanel('locations'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#locations">Where is Guesthouse?</a></li>
+        <li onclick="scrollToPanel('beta-stays'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#beta-stays">Beta Stays</a></li>
+        <li onclick="scrollToPanel('membership'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#membership">Charter Membership</a></li>
+        <li onclick="scrollToPanel('vision'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#vision">Our Vision</a></li>
       </ul>
     </div>
   </div>
-  <div class="hero">
-    <p class="hero__text">Join our VIP list for information about membership and upcoming events.</p>
-    <form class="email-form" action="/action_page.php">
-      <input class="email-form__input" type="email" name="email" placeholder="Email Address">
-      <input class="email-form__submit" type="submit" value="Subcscribe">
-    </form>
-  </div>
-  <div class="panel panel--description">
+  <div class="panel panel--description" id="description">
     <div class="panel__content">
       <h1 class="panel__header">Guesthouse is part coworking space, part bed and breakfast, occasional adventure guide, and 100% yours.</h1>
       <img class="panel__right-arrow" src="assets/svg/panel-right-arrow.svg">
     </div>
   </div>
-  <div class="panel panel--beta-stays panel--dark">
+ <!--  <div class="hero">
+    <p class="hero__text">Join our VIP list for information about membership and upcoming events.</p>
+    <form class="email-form" action="/action_page.php">
+      <input class="email-form__input" type="email" name="email" placeholder="Email Address">
+      <input class="email-form__submit" type="submit" value="Subcscribe">
+    </form>
+  </div> -->
+  <div class="panel panel--locations" id="locations">
+    <div class="panel__content">
+      <img class="panel__locations-icon" src="assets/svg/locations.svg">
+      <h1 class="panel__header">Where is Guesthouse?</h1>
+      <h1 class="panel__text">We build experiences, not places, and those experiences can happen almost anywhere. Whether it's a remote home in the Sierras, a charming villa in wine country, or a converted industrial space on the waterfront, our focus is creating an experience that inspires presence.</h1>
+      <img class="panel__right-arrow arrow--brown" src="assets/svg/panel-right-arrow.svg">
+    </div>
+  </div>
+  <div class="panel panel--beta-stays panel--dark" id="beta-stays">
     <div class="panel__content">
       <img class="panel__beta-stays-icon" src="assets/svg/beta-stays.svg">
       <h1 class="panel__header">Introducing Beta Stays</h1>
-      <h1 class="panel__text">We’re kicking off the Guesthouse experience with a series of exclusive  Beta Stays events. Register now for a sneak peak at a new kind of hospitality designed for big ideas and productivity.</h1>
-      <img class="panel__right-arrow" src="assets/svg/panel-right-arrow.svg">
+      <h1 class="panel__text">We're kicking off Guesthouse with a series of exclusive Beta Stay events. <a href="#">Sign up</a> now for a chance to experience a new kind of hospitality.</h1>
+      <img class="panel__right-arrow arrow--brown" src="assets/svg/panel-right-arrow.svg">
     </div>
   </div>
-  <div class="panel panel--locations">
+  <div class="panel panel--membership" id="membership">
     <div class="panel__content">
-      <img class="panel__locations-icon" src="assets/svg/locations.svg">
-      <h1 class="panel__header">Flagship Locations</h1>
-      <h1 class="panel__text">While most of our locations are hand selected and curated in existing high-end homes, we’re building a handful of flagship locations that epitomize the Guesthouse experience.</h1>
-      <img class="panel__right-arrow" src="assets/svg/panel-right-arrow.svg">
+      <img class="panel__membership-icon" src="assets/svg/membership.svg">
+      <h1 class="panel__header">Charter Membership</h1>
+      <h1 class="panel__text">We’re looking for creative thinkers, seasoned leaders, changemakers and visionaries to plant the seeds of what’s possible at Guesthouse.</h1>
+      <img class="panel__right-arrow arrow--brown" src="assets/svg/panel-right-arrow.svg">
     </div>
   </div>
-  <div class="panel panel--mission panel--dark">
+  <div class="panel panel--vision panel--dark" id="vision">
     <div class="panel__content">
-      <img class="panel__mission-icon" src="assets/svg/mission.svg">
-      <h1 class="panel__header">Our Mission</h1>
+      <img class="panel__vision-icon" src="assets/svg/vision.svg">
+      <h1 class="panel__header">Our Vision</h1>
       <h1 class="panel__text">We create experiences that encourage new ideas, deeper meaning, and a state of mind that drives relationships, business, and culture forward.</h1>
-      <img class="panel__right-arrow" src="assets/svg/panel-right-arrow.svg">
+      <img class="panel__right-arrow arrow--brown" src="assets/svg/panel-right-arrow.svg">
     </div>
   </div>
   <div class="footer">
-    <p class="footer__text">©2019 Guesthouse Corporation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p class="footer__text">©2019 Guesthouse Corporation.</p>
     <img class="footer__icon --left" src="assets/svg/instagram.svg">
     <img class="footer__icon" src="assets/svg/email.svg">
   </div>
