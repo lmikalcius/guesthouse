@@ -1,0 +1,75 @@
+/* desktop nav hiden on mobile */
+.nav {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav{
+    display: block;
+    width: 100%;
+    text-align: justify;
+    position: absolute;
+    bottom: 70px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Used to make the nav items take up the whole width */
+  .nav:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+
+  .nav__item {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+}
+
+
+/* logo */
+.logo {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  max-width: 167px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo {
+    max-width: 187px;
+  }
+}
+
+/* home-screen text */
+.panel--home .panel__header {
+  font-size: 40px;
+  line-height: 55px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .panel--home .panel__header {
+    font-size: 70px;
+    line-height: 85px;
+  }
+}
+
+.panel.panel--home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/home-page.png");
+}
+
+.panel--home .panel__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+

@@ -1,156 +1,8 @@
-html,
-body {
-  color: #FFFFFF;
-  padding: 0;
-  margin: 0 0;
-/*  overflow-x: hidden;
-  overflow-y: visible;
-*/}
+@import url("styles/base.css");
+@import url("styles/panel.css");
+@import url("styles/home-screen.css");
 
-* {
-  box-sizing: border-box;
-}
 
-/* Default white text for dark background */
-h1 {
-  font-family: "Noe Display";
-  font-style: normal;
-  font-weight: 500;
-}
-
-p, a {
-  font-family: "Proxima Nova";
-  color: #333333
-}
-
-.panel.panel--dark {
-  color: #333333;
-}
-/* This is the container for the panel, stretching the entire viewport */
-.panel {
-  height: 100%;
-  width: 100%;
-  background-color: gray;
-  background-repeat:no-repeat;
-  background-position: center center;
-  background-size: cover;
-  /*scroll-snap-type: y proximity;*/
-}
-
-/* This is the container for the content, it has a two column margin and a max-width so content does not get unwieldly */
-.panel__content {
-  height: 100%;
-  width: calc(100% * 10/12);
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.panel__header {
-  width: calc(100% * 10/12);
-}
-
-.panel__text {
-  text-align: center;
-  margin: 50px auto 0 auto;
-  font-family: "Proxima Nova";
-  font-size: 24px;
-  line-height: 34px;
-  width: calc(100% * 8/12);
-}
-
-.panel__right-arrow {
-  position: absolute;
-  top: 50%;
-  left: calc(100% - 50px);
-  transform: translateY(-50%);
-}
-
-.panel__arrow--down {
-  position: absolute;
-  bottom: 210px;
-  transform: rotate(90deg);
-}
-/*
-.panel--dark .panel__right-arrow {
-  filter: invert(14%) sepia(5%) saturate(6%) hue-rotate(330deg) brightness(14%) contrast(85%);
-}*/
-
-.panel__right-arrow.arrow--brown {
-  filter: invert(55%) sepia(84%) saturate(288%) hue-rotate(350deg) brightness(83%) contrast(87%);
-}
-
-.sample-bar {
-  background-color: green;
-  width: 100%;
-  height: 20px;
-}
-
-.nav {
-  width: 100%;
-  text-align: justify;
-  position: absolute;
-  bottom: 70px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Used to make the nav items take up the whole width */
-.nav:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
-
-.nav__item {
-  display: inline-block;
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.nav__link {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.logo {
-  position: absolute;
-  left: 0;
-  top: 50px;
-}
-
-.panel.panel--home {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/home-page.png");
-}
-
-.panel--home .panel__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.panel--home .panel__header {
-  font-size: 60px;
-  line-height: 75px;
-}
-/*
-.hero {
-  height: 200px;
-  width: 100%;
-  background-color: #FFFFFF;
-}
-
-.hero__text {
-  color: #000000;
-  text-align: center;
-  padding-top: 40px;
-  margin-bottom: 0px;
-  font-family: "Proxima Nova";
-  font-size: 24px;
-  line-height: 34px;
-}*/
 
 .footer {
   margin: 0 auto;
@@ -181,32 +33,6 @@ p, a {
   left: calc(100% - 130px);
 }
 
-.email-form {
-  text-align: center;
-}
-
-.email-form__input {
-  width: 595px;
-  height: 50px;
-  margin-top: 25px;
-  border: 1px solid #E7E7E7;
-  border-radius: 4px;
-  padding: 0 24px;
-  font-family: "Proxima Nova";
-  font-size: 14px;
-  line-height: 12px;
-  margin-right: 10px;
-}
-
-.email-form__submit {
-  background: #B6824B;
-  border-radius: 4px;
-  width: 192px;
-  height: 50px;
-  font-size: 14px;
-  line-height: 12px;
-  color: #FFFFFF;
-}
 
 
 
@@ -214,13 +40,13 @@ p, a {
     font-family: "Noe Display";
     src: url("fonts/Noe/Noe Display/NoeDisplay-Regular.otf") format("opentype");
 }
-
+/*
 @font-face {
     font-family: "Noe Display";
     font-weight: bold;
     src: url("fonts/Noe Display Bold.otf") format("opentype");
 }
-
+*/
 @font-face {
     font-family: "Proxima Nova";
     src: url("fonts/ProximaNova/Proxima Nova/Proxima Nova Regular.otf") format("opentype");
@@ -312,3 +138,47 @@ p, a {
   margin: 0 auto;
   margin-top: 40px;
 }
+
+
+/*
+.hero {
+  height: 200px;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.hero__text {
+  color: #000000;
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 0px;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  line-height: 34px;
+}*/
+/*.email-form {
+  text-align: center;
+}
+
+.email-form__input {
+  width: 595px;
+  height: 50px;
+  margin-top: 25px;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+  padding: 0 24px;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  line-height: 12px;
+  margin-right: 10px;
+}
+
+.email-form__submit {
+  background: #B6824B;
+  border-radius: 4px;
+  width: 192px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 12px;
+  color: #FFFFFF;
+}*/
