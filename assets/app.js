@@ -1,5 +1,3 @@
-console.log("HELLO");
-
 function scrollToPanel(panel) {
   var nav = document.getElementById('nav');
   var scrollPosition = nav.scrollTop;

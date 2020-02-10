@@ -1,0 +1,29 @@
+.panel.panel--locations {
+  background: #333333;
+}
+
+.panel--locations .panel__content {
+  text-align: center;
+  position: relative;
+  padding-top: 80px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .panel--locations .panel__content {
+    padding-top: 240px;
+  }
+}
+
+.panel--locations .panel__header {
+  font-size: 30px;
+  line-height: 45px;
+  margin: 20px auto 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .panel--locations .panel__header {
+    font-size: 50px;
+    line-height: 65px;
+    margin-top: 40px;
+  }
+}

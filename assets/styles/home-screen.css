@@ -34,6 +34,18 @@
   }
 }
 
+/* mobile-nav */
+.mobile-nav {
+  position: absolute;
+  left: calc(100% - 40px);
+  top: 51px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .mobile-nav {
+    display: none;
+  }
+}
 
 /* logo */
 .logo {

@@ -1,0 +1,24 @@
+.panel.panel--description {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/home-page-2.png");
+}
+
+.panel--description .panel__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.panel--description .panel__header {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .panel--description .panel__header {
+    font-size: 50px;
+    line-height: 65px;
+    width: calc(100% * 8/12);
+  }
+}

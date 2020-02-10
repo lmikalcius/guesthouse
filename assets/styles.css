@@ -1,6 +1,8 @@
 @import url("styles/base.css");
 @import url("styles/panel.css");
 @import url("styles/home-screen.css");
+@import url("styles/description.css");
+@import url("styles/locations.css");
 
 
 
@@ -52,24 +54,7 @@
     src: url("fonts/ProximaNova/Proxima Nova/Proxima Nova Regular.otf") format("opentype");
 }
 
-.panel.panel--description {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/home-page-2.png");
-}
 
-
-.panel--description .panel__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
-
-.panel--description .panel__header {
-  font-size: 50px;
-  line-height: 65px;
-  width: calc(100% * 8/12);
-}
 
 .panel.panel--beta-stays {
   background: #D9B17F;
@@ -82,23 +67,6 @@
 }
 
 .panel--beta-stays .panel__header {
-  font-size: 50px;
-  line-height: 65px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
-
-.panel.panel--locations {
-  background: #333333;
-}
-
-.panel--locations .panel__content {
-  text-align: center;
-  position: relative;
-  padding-top: 240px
-}
-
-.panel--locations .panel__header {
   font-size: 50px;
   line-height: 65px;
   margin: 0 auto;
