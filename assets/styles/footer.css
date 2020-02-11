@@ -1,12 +1,20 @@
 .footer {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0 10px;
   height: 150px;
   width: 100%;
   background-color: #FFFFFF;
-  width: calc(100% * 10/12);
   display: flex;
   align-items: center;
   position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer {
+    margin: 0 auto;
+    padding: 0;
+    width: calc(100% * 10/12);
+  }
 }
 
 .footer__text {
@@ -19,7 +27,7 @@
 .footer__icon {
   position: absolute;
   top: 50%;
-  left: calc(100% - 20px);
+  left: calc(100% - 50px);
   transform: translateY(-50%);
 }
 
@@ -30,7 +38,7 @@
 }
 
 .footer__icon.--left {
-  left: calc(100% - 90px);
+  left: calc(100% - 120px);
 }
 
 @media only screen and (min-width: 1024px) {
