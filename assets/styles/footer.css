@@ -1,0 +1,40 @@
+.footer {
+  margin: 0 auto;
+  height: 150px;
+  width: 100%;
+  background-color: #FFFFFF;
+  width: calc(100% * 10/12);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.footer__text {
+  color: #000000;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer__icon {
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 20px);
+  transform: translateY(-50%);
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer__icon {
+    left: calc(100% - 40px);
+  }
+}
+
+.footer__icon.--left {
+  left: calc(100% - 90px);
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer__icon.--left {
+    left: calc(100% - 130px);
+  }
+}

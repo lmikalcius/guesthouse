@@ -3,37 +3,13 @@
 @import url("styles/home-screen.css");
 @import url("styles/description.css");
 @import url("styles/locations.css");
+@import url("styles/beta-stays.css");
+@import url("styles/icon-header-text.css");
+@import url("styles/membership.css");
+@import url("styles/vision.css");
+@import url("styles/footer.css");
 
 
-
-.footer {
-  margin: 0 auto;
-  height: 150px;
-  width: 100%;
-  background-color: #FFFFFF;
-  width: calc(100% * 10/12);
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.footer__text {
-  color: #000000;
-  font-family: "Proxima Nova";
-  font-size: 12px;
-  line-height: 18px;
-}
-
-.footer__icon {
-  position: absolute;
-  top: 50%;
-  left: calc(100% - 40px);
-  transform: translateY(-50%);
-}
-
-.footer__icon.--left {
-  left: calc(100% - 130px);
-}
 
 
 
@@ -53,60 +29,6 @@
     font-family: "Proxima Nova";
     src: url("fonts/ProximaNova/Proxima Nova/Proxima Nova Regular.otf") format("opentype");
 }
-
-
-
-.panel.panel--beta-stays {
-  background: #D9B17F;
-}
-
-.panel--beta-stays .panel__content {
-  text-align: center;
-  position: relative;
-  padding-top: 240px
-}
-
-.panel--beta-stays .panel__header {
-  font-size: 50px;
-  line-height: 65px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
-
-.panel.panel--membership {
-  background: #333333;
-}
-
-.panel--membership .panel__content {
-  text-align: center;
-  position: relative;
-  padding-top: 240px
-}
-
-.panel--membership .panel__header {
-  font-size: 50px;
-  line-height: 65px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
-
-.panel.panel--vision {
-  background: #D9B17F;
-}
-
-.panel--vision .panel__content {
-  text-align: center;
-  position: relative;
-  padding-top: 240px
-}
-
-.panel--vision .panel__header {
-  font-size: 50px;
-  line-height: 65px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
-
 
 /*
 .hero {
