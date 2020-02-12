@@ -1,3 +1,29 @@
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel__content {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: all 1s ease;
+  height: 100%
+}
+
+.carousel__content .panel {
+  min-width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
 /*entire component container*/
 .panel {
   height: 100%;
@@ -24,7 +50,6 @@
 .panel__content {
   height: 100%;
   width: 100%;
-  position: relative;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -62,7 +87,7 @@
 }
 
 /*arrows*/
-.panel__right-arrow {
+.panel__right-arrow, .panel__left-arrow {
   display: none;
 }
 
@@ -73,19 +98,20 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .panel__right-arrow {
-    display: block;
-  }
-
-  .panel__header {
-    width: calc(100% * 10/12);
-  }
-
-  .panel__right-arrow {
+  .panel__right-arrow, .panel__left-arrow {
     position: absolute;
     top: 50%;
-    left: calc(100% - 50px);
     transform: translateY(-50%);
+  }
+
+  .panel__right-arrow {
+    display: block;
+    left: calc((13/14) *100% - 29px);
+  }
+
+  .panel__left-arrow {
+    transform: rotate(180deg);
+    left: calc((1/14) *100%);
   }
 
   .panel__arrow--down {
@@ -94,7 +120,7 @@
     transform: rotate(90deg);
   }
 
-  .panel__right-arrow.arrow--brown {
+  .arrow--brown {
     filter: invert(55%) sepia(84%) saturate(288%) hue-rotate(350deg) brightness(83%) contrast(87%);
   }
 }
