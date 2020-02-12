@@ -11,11 +11,11 @@ function scrollToPanel(panel) {
   // Smooth scroll
   var sI = setInterval(function () {
     counter++;
-    var position = (scrollPosition + distance) * smoothStep(counter / 30);
+    var position = (scrollPosition + distance) * smoothStep(counter / 40);
     window.scrollTo(0, position);
-    if (counter >= 30)
+    if (counter >= 40)
       clearInterval(sI);
-  }, 10);
+  }, 15);
 }
 
 var carousels = document.getElementsByClassName('carousel');
