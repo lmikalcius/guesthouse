@@ -1,7 +1,6 @@
 .panel--icon-header-text .panel__content {
   text-align: center;
   position: relative;
-  padding-top: 80px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -11,8 +10,8 @@
 }
 
 .panel--icon-header-text .panel__header {
-  font-size: 30px;
-  line-height: 45px;
+  font-size: 25px;
+  line-height: 35px;
   margin: 20px auto 0 auto;
 }
 
