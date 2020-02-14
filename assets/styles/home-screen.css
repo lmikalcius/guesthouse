@@ -63,8 +63,22 @@
 
 /* home-screen text */
 .panel--home .panel__header {
-  font-size: 40px;
-  line-height: 55px;
+  font-size: 35px;
+  line-height: 45px;
+}
+
+.panel__arrow--down {
+  position: absolute;
+  transform: rotate(90deg);
+  bottom: 50px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .panel__arrow--down {
+    position: absolute;
+    bottom: 210px;
+    transform: rotate(90deg);
+  }
 }
 
 @media only screen and (min-width: 1024px) {

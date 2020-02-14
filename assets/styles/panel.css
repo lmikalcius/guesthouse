@@ -91,12 +91,6 @@
   display: none;
 }
 
-.panel__arrow--down {
-  position: absolute;
-  transform: rotate(90deg);
-  bottom: 100px;
-}
-
 @media only screen and (min-width: 1024px) {
   .panel__right-arrow, .panel__left-arrow {
     position: absolute;
@@ -112,12 +106,6 @@
   .panel__left-arrow {
     transform: rotate(180deg);
     left: calc((1/14) *100%);
-  }
-
-  .panel__arrow--down {
-    position: absolute;
-    bottom: 210px;
-    transform: rotate(90deg);
   }
 
   .arrow--brown {

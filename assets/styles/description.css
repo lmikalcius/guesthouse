@@ -11,8 +11,8 @@
 }
 
 .panel--description .panel__header {
-  font-size: 30px;
-  line-height: 45px;
+  font-size: 25px;
+  line-height: 35px;
 }
 
 @media only screen and (min-width: 1024px) {
