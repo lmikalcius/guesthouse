@@ -135,6 +135,10 @@
   }
 }
 
+.mobile-arrows__left-arrow, .mobile-arrows__right-arrow {
+  height: 34px;
+}
+
 .mobile-arrows__left-arrow {
   visibility: hidden;
   transform: rotate(180deg);

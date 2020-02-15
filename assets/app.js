@@ -31,8 +31,6 @@ var carousels = document.getElementsByClassName('carousel');
   var count = 0;
   var maxCount = panelCount - 1;
 
-  console.log(mobileLeftButton);
-
   window.addEventListener('resize', function() {
     offset = 0;
     count = 0;
