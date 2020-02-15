@@ -116,3 +116,42 @@
   }
 }
 
+.mobile-arrows {
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  left: 0;
+  right: 0;
+}
+
+.mobile-arrows__left-arrow {
+  transform: rotate(180deg);
+}
+
+.mobile-arrows__dots {
+  margin: 0 45px;
+  padding: 0;
+}
+
+.mobile-arrows__progress-dot {
+  background: #FFFFFF;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.mobile-arrows__progress-dot:last-of-type{
+  margin: 0;
+}
+
+.mobile-arrows__progress-dot.--active{
+  opacity: 100%;
+  background: #B5814B;
+}

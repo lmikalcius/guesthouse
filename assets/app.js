@@ -23,11 +23,15 @@ var carousels = document.getElementsByClassName('carousel');
   // the carousel variable is within the forEach closure and referenced in the listeners
   var carousel = carouselWrapper.getElementsByClassName("carousel__content")[0];
   var leftButton = carouselWrapper.getElementsByClassName("panel__left-arrow")[0];
+  var mobileLeftButton = carouselWrapper.getElementsByClassName("mobile-arrows__left-arrow")[0];
   var rightButton = carouselWrapper.getElementsByClassName("panel__right-arrow")[0];
+  var mobileRightButton = carouselWrapper.getElementsByClassName("mobile-arrows__right-arrow")[0];
   var panelCount = carousel.getElementsByClassName("panel").length;
   var offset = 0;
   var count = 0;
   var maxCount = panelCount - 1;
+
+  console.log(mobileLeftButton);
 
   window.addEventListener('resize', function() {
     var carouselWidth = carousel.offsetWidth;
@@ -64,4 +68,38 @@ var carousels = document.getElementsByClassName('carousel');
       rightButton.style.display = "none";
     }
   })
+
+  if (mobileLeftButton) {
+    mobileLeftButton.addEventListener("click", function() {
+      if (count > 0) {
+        count--;
+        var carouselWidth = carousel.offsetWidth;
+        offset = carouselWidth * count;
+        carousel.style.transform = "translateX(-" + offset + "px)";
+      }
+      if (count < maxCount) {
+        rightButton.style.display = "block";
+      }
+      if (count == 0) {
+        leftButton.style.display = "none";
+      }
+    })
+  }
+
+  if (mobileRightButton) {
+    mobileRightButton.addEventListener("click", function() {
+      if (count < maxCount) {
+        var carouselWidth = carousel.offsetWidth;
+        count++;
+        offset = carouselWidth * count;
+        carousel.style.transform = "translateX(-" + offset + "px)";
+      }
+      if (count > 0) {
+        leftButton.style.display = "block";
+      }
+      if (count == maxCount) {
+        rightButton.style.display = "none";
+      }
+    })
+  }
 });
