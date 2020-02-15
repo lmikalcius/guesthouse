@@ -34,9 +34,13 @@ var carousels = document.getElementsByClassName('carousel');
   console.log(mobileLeftButton);
 
   window.addEventListener('resize', function() {
-    var carouselWidth = carousel.offsetWidth;
-    offset = carouselWidth * count;
-    carousel.style.transform = "translateX(-" + offset + "px)";
+    offset = 0;
+    count = 0;
+    carousel.style.transform = "translateX(0px)";
+    leftButton.style.visibility = "hidden";
+    mobileLeftButton.style.visibility = "hidden";
+    rightButton.style.visibility = "visible";
+    mobileRightButton.style.visibility = "visible";
   }, true);
 
   leftButton.addEventListener("click", function() {
@@ -47,10 +51,10 @@ var carousels = document.getElementsByClassName('carousel');
       carousel.style.transform = "translateX(-" + offset + "px)";
     }
     if (count < maxCount) {
-      rightButton.style.display = "block";
+      rightButton.style.visibility = "visible";
     }
     if (count == 0) {
-      leftButton.style.display = "none";
+      leftButton.style.visibility = "hidden";
     }
   })
 
@@ -62,10 +66,10 @@ var carousels = document.getElementsByClassName('carousel');
       carousel.style.transform = "translateX(-" + offset + "px)";
     }
     if (count > 0) {
-      leftButton.style.display = "block";
+      leftButton.style.visibility = "visible";
     }
     if (count == maxCount) {
-      rightButton.style.display = "none";
+      rightButton.style.visibility = "hidden";
     }
   })
 

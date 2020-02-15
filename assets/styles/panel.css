@@ -107,10 +107,13 @@
 
   .panel__right-arrow {
     display: block;
+    visibility: visible;
     left: calc((13/14) *100% - 29px);
   }
 
   .panel__left-arrow {
+    display: block;
+    visibility: hidden;
     transform: rotate(180deg);
     left: calc((1/14) *100%);
   }
