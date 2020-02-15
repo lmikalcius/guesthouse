@@ -78,10 +78,10 @@ var carousels = document.getElementsByClassName('carousel');
         carousel.style.transform = "translateX(-" + offset + "px)";
       }
       if (count < maxCount) {
-        rightButton.style.display = "block";
+        mobileRightButton.style.visibility = "visible";
       }
       if (count == 0) {
-        leftButton.style.display = "none";
+        mobileLeftButton.style.visibility = "hidden";
       }
     })
   }
@@ -95,10 +95,10 @@ var carousels = document.getElementsByClassName('carousel');
         carousel.style.transform = "translateX(-" + offset + "px)";
       }
       if (count > 0) {
-        leftButton.style.display = "block";
+        mobileLeftButton.style.visibility = "visible";
       }
       if (count == maxCount) {
-        rightButton.style.display = "none";
+        mobileRightButton.style.visibility = "hidden";
       }
     })
   }

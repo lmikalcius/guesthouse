@@ -94,6 +94,10 @@
   display: none;
 }
 
+.arrow--brown {
+  filter: invert(55%) sepia(84%) saturate(288%) hue-rotate(350deg) brightness(83%) contrast(87%);
+}
+
 @media only screen and (min-width: 1024px) {
   .panel__right-arrow, .panel__left-arrow {
     position: absolute;
@@ -110,10 +114,6 @@
     transform: rotate(180deg);
     left: calc((1/14) *100%);
   }
-
-  .arrow--brown {
-    filter: invert(55%) sepia(84%) saturate(288%) hue-rotate(350deg) brightness(83%) contrast(87%);
-  }
 }
 
 .mobile-arrows {
@@ -126,7 +126,14 @@
   right: 0;
 }
 
+@media only screen and (min-width: 1024px) {
+  .mobile-arrows {
+    display: none;
+  }
+}
+
 .mobile-arrows__left-arrow {
+  visibility: hidden;
   transform: rotate(180deg);
 }
 
@@ -153,5 +160,9 @@
 
 .mobile-arrows__progress-dot.--active{
   opacity: 100%;
+  background: #FFFFFF;
+}
+
+.mobile-arrows__progress-dot.--brown{
   background: #B5814B;
 }
