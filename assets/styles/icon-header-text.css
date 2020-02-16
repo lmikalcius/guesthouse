@@ -23,25 +23,25 @@
   }
 }
 
-.--hidden-mobile.panel {
+.--icon-hidden-mobile.panel {
   background: #E7E7E7;
   color: #333333;
 }
 
-.--hidden-mobile .panel__icon {
+.--icon-hidden-mobile .panel__icon {
   display: none;
 }
 
-.--hidden-mobile .panel__header {
+.--icon-hidden-mobile .panel__header {
   margin-top: 0;
 }
 
 @media only screen and (min-width: 1024px) {
-  .--hidden-mobile .panel__icon {
+  .--icon-hidden-mobile .panel__icon {
     display: inline;
   }
 
-  .--hidden-mobile .panel__header {
+  .--icon-hidden-mobile .panel__header {
     font-size: 35px;
     line-height: 50px;
     margin-top: 85px;

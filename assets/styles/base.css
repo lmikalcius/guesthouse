@@ -18,3 +18,7 @@ p, a {
   font-family: "Proxima Nova";
   color: #333333
 }
+
+.arrow {
+  cursor: pointer;
+}
