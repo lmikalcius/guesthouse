@@ -53,6 +53,7 @@ var carousels = document.getElementsByClassName('carousel');
     mobileLeftButton.style.visibility = "hidden";
     rightButton.style.visibility = "visible";
     mobileRightButton.style.visibility = "visible";
+    moveDot();
   }, true);
 
   leftButton.addEventListener("click", function() {
