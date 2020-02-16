@@ -19,8 +19,8 @@ function scrollToPanel(panel) {
 }
 
 var carousels = document.getElementsByClassName('carousel');
+// use forEach to create closures to hold variable state for listeners
 [].forEach.call(carousels, function(carouselWrapper) {
-  // the carousel variable is within the forEach closure and referenced in the listeners
   var carousel = carouselWrapper.getElementsByClassName("carousel__content")[0];
   var leftButton = carouselWrapper.getElementsByClassName("panel__left-arrow")[0];
   var rightButton = carouselWrapper.getElementsByClassName("panel__right-arrow")[0];

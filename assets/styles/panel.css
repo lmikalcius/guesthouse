@@ -169,7 +169,7 @@
   margin: 0 10px 0 0;
   padding: 0;
   cursor: pointer;
-  opacity: 50%;
+  opacity: .5;
 }
 
 .mobile-arrows__progress-dot:last-of-type{
@@ -177,7 +177,7 @@
 }
 
 .mobile-arrows__progress-dot.--active{
-  opacity: 100%;
+  opacity: 1;
   background: #FFFFFF;
 }
 
