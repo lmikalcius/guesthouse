@@ -1,5 +1,29 @@
 .panel.panel--description {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/home-page-2.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/description.png");
+}
+
+.panel.panel--description-second {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/description-second.png");
+}
+
+.panel.panel--description-third {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/description-third.png");
+}
+
+.panel.panel--description-fourth {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/description-fourth.png");
+}
+
+.panel.panel--description-fifth {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/description-fifth.png");
+}
+
+.panel.panel--description-sixth {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/description-sixth.png");
+}
+
+.panel.panel--description-seventh {
+  background-color: #333333;
 }
 
 .panel.panel--description .panel__header {

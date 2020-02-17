@@ -18,6 +18,13 @@ function scrollToPanel(panel) {
   }, 10);
 }
 
+function scrollToSignUp() {
+  var rightArrow = document.getElementById("beta-stays").getElementsByClassName("panel__right-arrow")[0];
+  for (var i = 0; i < 3; i++) {
+    rightArrow.click();
+  }
+}
+
 var carousels = document.getElementsByClassName('carousel');
 // use forEach to create closures to hold variable state for listeners
 [].forEach.call(carousels, function(carouselWrapper) {

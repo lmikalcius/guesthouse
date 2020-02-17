@@ -1,3 +1,8 @@
 .panel.panel--locations {
   background: #333333;
 }
+
+.panel.panel--locations-second.panel--icon-header-text {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/locations-second.png");
+  color: #FFFFFF;
+}

@@ -25,6 +25,10 @@
     margin-right: 10px;
   }
 
+  .email-signup__input.--first {
+    margin-top: 20px;
+  }
+
   .--multiple-inputs .email-signup__input {
     width: 400px;
   }
