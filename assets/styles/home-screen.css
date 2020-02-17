@@ -102,7 +102,7 @@
 
 @media only screen and (min-width: 1024px) {
   .panel--home .panel__header {
-    width: calc(100% * 11/12);
+    width: calc(100% * 21/24);
   }
 }
 
