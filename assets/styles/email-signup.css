@@ -24,6 +24,10 @@
     width: 595px;
     margin-right: 10px;
   }
+
+  .email-signup__input.--multiple-inputs {
+    width: 400px;
+  }
 }
 
 .email-signup__submit {
