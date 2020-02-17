@@ -1,0 +1,13 @@
+.panel--always-centered .panel__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+  .panel--always-centered .panel__content {
+    width: calc(100% * 8/12);
+  }
+}
