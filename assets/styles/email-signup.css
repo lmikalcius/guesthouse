@@ -6,13 +6,17 @@
   width: 300px;
   margin-right: 0px;
   height: 50px;
-  margin-top: 25px;
+  margin-top: 15px;
   border: 1px solid #E7E7E7;
   border-radius: 4px;
   padding: 0 24px;
   font-family: "Proxima Nova";
   font-size: 14px;
   line-height: 12px;
+}
+
+.email-signup__input.--multiple-inputs {
+  margin-top: 10px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -31,4 +35,5 @@
   line-height: 12px;
   color: #FFFFFF;
   margin-top: 10px;
+  -webkit-appearance: none;
 }
