@@ -11,10 +11,32 @@
 @import url("styles/email-signup.css");
 @import url("styles/always-centered.css");
 @import url("styles/details.css");
+@import url("styles/long-form.css");
 
 
 
+.profile-image {
+  float: left;
+  margin-right: 26px;
+}
 
+.panel.panel--team .panel__content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.panel.panel--team .panel__subtext-container {
+  width: 475px;
+  display: inline-block;
+}
+
+.panel.panel--team .panel__header {
+  margin: 0;
+}
+
+.panel.panel--team .panel__subtext {
+  margin: 0;
+}
 
 
 @font-face {

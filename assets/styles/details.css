@@ -1,3 +1,8 @@
+.panel.panel--details {
+  background-color: white;
+  color: #333333;
+}
+
 .panel--details .panel__header {
   font-size: 25px;
   line-height: 35px;
@@ -33,4 +38,17 @@
     line-height: 20px;
     margin-top: 55px;
   }
+
+  .panel--details .panel__subtext-container .panel__subtext {
+    text-align: left;
+    vertical-align: top;
+    width: 375px;
+    display: inline-block;
+  }
+
+  .panel--details .panel__subtext-container .panel__subtext:first-of-type {
+    margin-right: 45px;
+  }
+
+
 }
