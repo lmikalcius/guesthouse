@@ -53,6 +53,7 @@
 
   .panel--details .panel__subtext {
     margin-top: 0;
+    width: calc(100% * 8/12);
   }
 
   .panel--details.panel--stay-details .panel__subtext:first-of-type {
