@@ -39,16 +39,27 @@
     margin-top: 55px;
   }
 
-  .panel--details .panel__subtext-container .panel__subtext {
-    text-align: left;
-    vertical-align: top;
-    width: 375px;
-    display: inline-block;
+  .panel--details.panel--stay-details .panel__subtext {
+    margin-top: 0;
   }
 
-  .panel--details .panel__subtext-container .panel__subtext:first-of-type {
-    margin-right: 45px;
+  .panel--details .panel__subtext {
+    margin-top: 0;
   }
 
+  .panel--details .panel__subtext.--bold {
+    font-family: "Proxima Nova Bold";
+  }
 
+  .panel--details.panel--stay-details .panel__subtext:first-of-type {
+    margin-top: 35px;
+  }
+
+  .panel--details.panel--locations .panel__subtext-container .panel__subtext {
+    width: calc(100% * 8/12);
+  }
+
+  .panel--details .panel__subtext-container {
+    margin-top: 30px;
+  }
 }

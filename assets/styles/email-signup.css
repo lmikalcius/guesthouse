@@ -15,27 +15,33 @@
   line-height: 12px;
 }
 
-.email-signup__input.--multiple-inputs {
+.--multiple-inputs .email-signup__input {
   margin-top: 10px;
+  display: block;
 }
 
 @media only screen and (min-width: 1024px) {
   .email-signup__input {
-    width: 595px;
+    width: 580px;
     margin-right: 10px;
   }
 
-  .email-signup__input.--first {
-    margin-top: 20px;
+  .email-signup__input:first-of-type {
+    margin-top: 25px;
   }
 
   .--multiple-inputs .email-signup__input {
-    width: 400px;
+    width: 385px;
+  }
+
+  .--multiple-inputs .email-signup__submit {
+    margin-top: 21px;
   }
 }
 
 .email-signup__submit {
   background: #B6824B;
+  border: #B6824B;
   border-radius: 4px;
   width: 192px;
   height: 50px;

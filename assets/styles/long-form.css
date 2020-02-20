@@ -2,3 +2,7 @@
   background-color: #333333;
   color: white;
 }
+
+.panel.panel--long-form .panel__header {
+  margin: 0;
+}

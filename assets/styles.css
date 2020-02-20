@@ -18,6 +18,12 @@
 .profile-image {
   float: left;
   margin-right: 26px;
+  height: 60px;
+}
+@media only screen and (min-width: 1024px) {
+  .profile-image {
+    height: 150px;
+  }
 }
 
 .panel.panel--team .panel__content {
@@ -25,9 +31,53 @@
   align-items: flex-start;
 }
 
+@media only screen and (max-width: 1024px) {
+  .panel.panel--team .panel__content {
+    margin-left: 15px;
+  }
+}
+
+.panel.panel--team .panel__subtext.--bio {
+  display: none;
+}
+
 .panel.panel--team .panel__subtext-container {
-  width: 475px;
-  display: inline-block;
+  display: block;
+  vertical-align: top;
+  height: 60px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .panel.panel--team .panel__subtext-container {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .panel.panel--team .panel__subtext-container {
+    height: auto;
+    display: inline-block;
+  }
+}
+
+.panel.panel--team .panel__subtext-container:first-of-type {
+  margin-right: 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .panel.panel--team .panel__subtext-container {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .panel.panel--team .panel__subtext-container {
+    width: 48%;
+  }
+
+  .panel.panel--team .panel__subtext.--bio {
+    display: block;
+  }
 }
 
 .panel.panel--team .panel__header {
@@ -36,6 +86,14 @@
 
 .panel.panel--team .panel__subtext {
   margin: 0;
+  display: block;
+  width: 300%;
+}
+
+@media only screen and (min-width: 1300px) {
+  .panel.panel--team .panel__subtext {
+    width: 100%;
+  }
 }
 
 
@@ -43,13 +101,13 @@
     font-family: "Noe Display";
     src: url("fonts/Noe/Noe Display/NoeDisplay-Regular.otf") format("opentype");
 }
-/*
+
 @font-face {
-    font-family: "Noe Display";
+    font-family: "Proxima Nova Bold";
     font-weight: bold;
-    src: url("fonts/Noe Display Bold.otf") format("opentype");
+    src: url("fonts/ProximaNova/Proxima Nova Bold/Proxima Nova Bold.otf") format("opentype");
 }
-*/
+
 @font-face {
     font-family: "Proxima Nova";
     src: url("fonts/ProximaNova/Proxima Nova/Proxima Nova Regular.otf") format("opentype");
