@@ -13,7 +13,9 @@
 @import url("styles/details.css");
 @import url("styles/long-form.css");
 
-
+.panel .--semi-bold {
+  font-family: "Proxima Nova Semi Bold";
+}
 
 .profile-image {
   float: left;
@@ -106,6 +108,11 @@
     font-family: "Proxima Nova Bold";
     font-weight: bold;
     src: url("fonts/ProximaNova/Proxima Nova Bold/Proxima Nova Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Proxima Nova Semi Bold";
+    src: url("fonts/ProximaNova/Proxima Nova Semibold/Proxima Nova Semibold.otf") format("opentype");
 }
 
 @font-face {

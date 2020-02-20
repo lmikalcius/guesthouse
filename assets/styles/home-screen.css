@@ -31,11 +31,13 @@
   .nav__link {
     text-decoration: none;
     color: #FFFFFF;
+    font-family: "Proxima Nova Semi Bold";
   }
 }
 
 /* mobile-nav */
 .mobile-nav {
+  display: none;
   position: absolute;
   left: calc(100% - 40px);
   top: 51px;
