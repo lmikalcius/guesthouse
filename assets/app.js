@@ -145,17 +145,17 @@ longForm.addEventListener("submit", function(e) {
   e.preventDefault();
   var formData = new FormData(this);
   // formData.append("api_key", "9f4b18b2-03ed-4e9a-8298-3e0756ad4102");
-  var formDataJSON = {};
-  formData.forEach(function(value, key){
-      formDataJSON[key] = value;
-  });
+  // var formDataJSON = {};
+  // formData.forEach(function(value, key){
+  //     formDataJSON[key] = value;
+  // });
 
   fetch('https://app.guesthousecorp.com/memberships/api/beta-stays-registration', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formDataJSON),
+    // headers: {
+    //   'Content-Type': 'application/json',
+    // },
+    body: formData,//JSON.stringify(formDataJSON),
   })
   .then((response) => response.json())
   .then((data) => {
