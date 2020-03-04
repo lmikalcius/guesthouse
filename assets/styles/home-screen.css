@@ -6,13 +6,14 @@
 @media only screen and (min-width: 1024px) {
   .nav{
     display: block;
-    width: 100%;
     text-align: justify;
-    position: absolute;
     bottom: 70px;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    position: fixed;
+    width: calc(100% * 10/12);
+    z-index: 1;
   }
 
   /* Used to make the nav items take up the whole width */

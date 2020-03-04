@@ -1,23 +1,3 @@
-// function scrollToPanel(panel) {
-//   var nav = document.getElementById('nav');
-//   var scrollPosition = nav.scrollTop;
-//   var distance = document.getElementById(panel).offsetTop - scrollPosition;
-//   var counter = 1;
-
-//   function smoothStep(n) {
-//     return n * n * (3 - 2 * n);
-//   }
-
-//   // Smooth scroll
-//   var sI = setInterval(function () {
-//     counter++;
-//     var position = (scrollPosition + distance) * smoothStep(counter / 50);
-//     window.scrollTo(0, position);
-//     if (counter >= 50)
-//       clearInterval(sI);
-//   }, 10);
-// }
-
 function scrollToSignUp() {
   var rightArrow = document.getElementById("beta-stays").getElementsByClassName("panel__right-arrow")[0];
   for (var i = 0; i < 3; i++) {
