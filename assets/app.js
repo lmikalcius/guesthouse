@@ -1,22 +1,22 @@
-function scrollToPanel(panel) {
-  var nav = document.getElementById('nav');
-  var scrollPosition = nav.scrollTop;
-  var distance = document.getElementById(panel).offsetTop - scrollPosition;
-  var counter = 1;
+// function scrollToPanel(panel) {
+//   var nav = document.getElementById('nav');
+//   var scrollPosition = nav.scrollTop;
+//   var distance = document.getElementById(panel).offsetTop - scrollPosition;
+//   var counter = 1;
 
-  function smoothStep(n) {
-    return n * n * (3 - 2 * n);
-  }
+//   function smoothStep(n) {
+//     return n * n * (3 - 2 * n);
+//   }
 
-  // Smooth scroll
-  var sI = setInterval(function () {
-    counter++;
-    var position = (scrollPosition + distance) * smoothStep(counter / 50);
-    window.scrollTo(0, position);
-    if (counter >= 50)
-      clearInterval(sI);
-  }, 10);
-}
+//   // Smooth scroll
+//   var sI = setInterval(function () {
+//     counter++;
+//     var position = (scrollPosition + distance) * smoothStep(counter / 50);
+//     window.scrollTo(0, position);
+//     if (counter >= 50)
+//       clearInterval(sI);
+//   }, 10);
+// }
 
 function scrollToSignUp() {
   var rightArrow = document.getElementById("beta-stays").getElementsByClassName("panel__right-arrow")[0];
@@ -164,4 +164,51 @@ longForm.addEventListener("submit", function(e) {
   .catch((error) => {
     console.error('Error:', error);
   });
+});
+
+var currentPanel = 0;
+var panels = $(".container");
+var recentScroll = false;
+
+
+function scrollThere(targetElement, speed) {
+  $('html, body').stop().animate( { scrollTop: targetElement.offset().top }, speed);
+}
+
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+  var st = $(this).scrollTop();
+  if (!recentScroll && st > lastScrollTop){
+    recentScroll = true;
+    window.setTimeout(() => { recentScroll = false; }, 550);
+    if (currentPanel < panels.length - 1) {
+      currentPanel++;
+      scrollThere(panels.eq(currentPanel), 500);
+    }
+  } else {
+    if (!recentScroll && currentPanel > 0) {
+      recentScroll = true;
+      window.setTimeout(() => { recentScroll = false; }, 550);
+      currentPanel--;
+      scrollThere(panels.eq(currentPanel), 500);
+    }
+  }
+  lastScrollTop = st;
+});
+
+$(".nav__item").click(function (e) {
+  e.preventDefault();
+  var ind = $('.nav__item').index(this);
+  currentPanel = ind + 1;
+  recentScroll = true;
+  window.setTimeout(() => { recentScroll = false; }, 550);
+  scrollThere(panels.eq(currentPanel), 500);
+});
+
+$(".panel__arrow--down").click(function (e) {
+  e.preventDefault();
+  currentPanel = 1;
+  recentScroll = true;
+  window.setTimeout(() => { recentScroll = false; }, 550);
+  scrollThere(panels.eq(currentPanel), 500);
 });

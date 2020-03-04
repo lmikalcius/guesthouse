@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 </head>
 <body>
-  <div class="panel panel--home">
+  <div class="container panel panel--home">
     <div class="panel__content">
       <img class="logo" src="assets/svg/logo.svg">
       <a class="mobile-nav" href="#"><img src="assets/svg/burger.svg"></a>
       <h1 class="panel__header">The first purpose-built hospitality experience designed for big ideas.</h1>
-      <img onclick="scrollToPanel('description'); event.preventDefault();" class="panel__arrow--down arrow" src="assets/svg/panel-right-arrow.svg">
+      <img class="panel__arrow--down arrow" src="assets/svg/panel-right-arrow.svg">
       <ul class="nav" id="nav">
-        <li onclick="scrollToPanel('description'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#description">What is Guesthouse?</a></li>
-        <li onclick="scrollToPanel('locations'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#locations">Where is Guesthouse?</a></li>
-        <li onclick="scrollToPanel('beta-stays'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#beta-stays">Beta Stays</a></li>
-        <li onclick="scrollToPanel('membership'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#membership">Charter Membership</a></li>
-        <li onclick="scrollToPanel('vision'); event.preventDefault();" class="nav__item"><a class="nav__link" href="#vision">Our Vision</a></li>
+        <li class="nav__item"><a class="nav__link" href="#description">What is Guesthouse?</a></li>
+        <li class="nav__item"><a class="nav__link" href="#locations">Where is Guesthouse?</a></li>
+        <li class="nav__item"><a class="nav__link" href="#beta-stays">Beta Stays</a></li>
+        <li class="nav__item"><a class="nav__link" href="#membership">Charter Membership</a></li>
+        <li class="nav__item"><a class="nav__link" href="#vision">Our Vision</a></li>
       </ul>
     </div>
   </div>
 
-  <div class="carousel" id="description">
+  <div class="container carousel" id="description">
     <div class="carousel__content">
       <div class="panel panel--description panel--always-centered">
         <div class="panel__content">
@@ -78,7 +78,7 @@
       <img class="mobile-arrows__right-arrow arrow" src="assets/svg/panel-right-arrow.svg">
     </div>
   </div>
-  <div class="carousel" id="locations">
+  <div class="container carousel" id="locations">
     <div class="carousel__content">
       <div class="panel panel--locations panel--icon-header-text">
         <div class="panel__content">
@@ -110,7 +110,7 @@
     </div>
   </div>
 
-  <div class="carousel" id="beta-stays">
+  <div class="container carousel" id="beta-stays">
     <div class="carousel__content">
       <div class="panel panel--beta-stays panel--dark panel--icon-header-text">
         <div class="panel__content">
@@ -161,7 +161,7 @@
     </div>
   </div>
 
-  <div class="carousel" id="membership">
+  <div class="container carousel" id="membership">
     <div class="carousel__content">
       <div class="panel panel--membership panel--icon-header-text">
         <div class="panel__content">
@@ -196,7 +196,7 @@
     </div>
   </div>
 
-  <div class="carousel" id="vision">
+  <div class="container carousel" id="vision">
     <div class="carousel__content">
       <div class="panel panel--vision panel--dark panel--icon-header-text">
         <div class="panel__content">
@@ -283,12 +283,13 @@
     </div>
   </div>
 
-  <div class="footer">
+  <div class="container footer">
     <p class="footer__text">&copy;2019 Guesthouse Corporation.</p>
     <img class="footer__icon --left" src="assets/svg/instagram.svg">
     <img class="footer__icon" src="assets/svg/email.svg">
   </div>
 
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/app.js"></script>
 </body>
 </html>
