@@ -13,6 +13,7 @@
     padding: 0;
     position: fixed;
     width: calc(100% * 10/12);
+    max-width: 1200px;
     z-index: 1;
   }
 
