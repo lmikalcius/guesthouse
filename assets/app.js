@@ -226,6 +226,8 @@ $(".panel__arrow--down").click(function (e) {
 
 $(".mobile-nav__inner").on('click', function(event) {
     event.preventDefault();
-    $(this).toggleClass("active");
+    $(this).toggleClass("--active");
+    $(".mobile-menu").toggleClass("--active");
+    $("body").toggleClass("--active");
     console.log($(this).attr("class"));
 });

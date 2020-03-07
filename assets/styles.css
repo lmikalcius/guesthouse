@@ -12,6 +12,7 @@
 @import url("styles/always-centered.css");
 @import url("styles/details.css");
 @import url("styles/long-form.css");
+@import url("styles/mobile-nav.css");
 
 .panel .--semi-bold {
   font-family: "Proxima Nova Semi Bold";

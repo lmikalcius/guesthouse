@@ -115,7 +115,7 @@
 }
 
 
-.mobile-nav, .mobile-nav.active, .mobile-nav__inner, .mobile-nav__inner::before, .mobile-nav__inner::after {
+.mobile-nav, .mobile-nav.--active, .mobile-nav__inner, .mobile-nav__inner::before, .mobile-nav__inner::after {
   -webkit-transition: 250ms all;
   transition: 250ms all;
 }
@@ -124,7 +124,6 @@
   cursor: pointer;
   height: 28px;
   width: 40px;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-nav__inner {
@@ -153,17 +152,17 @@
   transform: translateY(9px);
 }
 
-.mobile-nav__inner.active {
+.mobile-nav__inner.--active {
   background: transparent;
 }
 
-.mobile-nav__inner.active::before {
+.mobile-nav__inner.--active::before {
   -webkit-transform: translateY(0px) rotate(-45deg);
   -ms-transform: translateY(0px) rotate(-45deg);
   transform: translateY(0px) rotate(-45deg);
 }
 
-.mobile-nav__inner.active::after {
+.mobile-nav__inner.--active::after {
   -webkit-transform: translateY(-3px) translateX(0px) rotate(45deg);
   -ms-transform: translateY(-3px) translateX(0px) rotate(45deg);
   transform: translateY(-3px) translateX(0px) rotate(45deg);

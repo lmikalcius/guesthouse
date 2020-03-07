@@ -1,0 +1,23 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #333333;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: 100%;
+  transition: left 0.4s; /* creates sliding motion */
+  -webkit-transition: left 0.4s;
+}
+
+.mobile-menu.--active {
+  left: 0;
+}
+
+body.--active {
+  overflow: hidden;
+}
