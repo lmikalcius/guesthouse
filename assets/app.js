@@ -224,8 +224,8 @@ $(".panel__arrow--down").click(function (e) {
   scrollThere(panels.eq(currentPanel), 500);
 });
 
-$(".mobile-nav").on('click', function(event) {
+$(".mobile-nav__inner").on('click', function(event) {
     event.preventDefault();
-    $(this).toggleClass("is-active");
+    $(this).toggleClass("active");
     console.log($(this).attr("class"));
 });

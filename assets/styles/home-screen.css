@@ -114,3 +114,57 @@
   }
 }
 
+
+.mobile-nav, .mobile-nav.active, .mobile-nav__inner, .mobile-nav__inner::before, .mobile-nav__inner::after {
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.mobile-nav {
+  cursor: pointer;
+  height: 28px;
+  width: 40px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-nav__inner {
+  transform: translateY(12px);
+  background: #fff;
+  height: 3px;
+}
+
+.mobile-nav__inner::before,
+.mobile-nav__inner::after {
+  background: white;
+  content: '';
+  display: block;
+  height: 3px;
+}
+
+.mobile-nav__inner::before {
+  -webkit-transform: translateY(-12px);
+  -ms-transform: translateY(-12px);
+  transform: translateY(-12px);
+}
+
+.mobile-nav__inner::after {
+  -webkit-transform: translateY(9px);
+  -ms-transform: translateY(9px);
+  transform: translateY(9px);
+}
+
+.mobile-nav__inner.active {
+  background: transparent;
+}
+
+.mobile-nav__inner.active::before {
+  -webkit-transform: translateY(0px) rotate(-45deg);
+  -ms-transform: translateY(0px) rotate(-45deg);
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.mobile-nav__inner.active::after {
+  -webkit-transform: translateY(-3px) translateX(0px) rotate(45deg);
+  -ms-transform: translateY(-3px) translateX(0px) rotate(45deg);
+  transform: translateY(-3px) translateX(0px) rotate(45deg);
+}
