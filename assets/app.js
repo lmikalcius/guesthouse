@@ -33,14 +33,9 @@ var carousels = document.getElementsByClassName('carousel');
   }
 
   window.addEventListener('resize', function() {
-    offset = 0;
-    count = 0;
-    carousel.style.transform = "translateX(0px)";
-    leftButton.style.visibility = "hidden";
-    mobileLeftButton.style.visibility = "hidden";
-    rightButton.style.visibility = "visible";
-    mobileRightButton.style.visibility = "visible";
-    moveDot();
+    var carouselWidth = carousel.offsetWidth;
+    offset = carouselWidth * count;
+    carousel.style.transform = "translateX(-" + offset + "px)";
   }, true);
 
   leftButton.addEventListener("click", function() {
