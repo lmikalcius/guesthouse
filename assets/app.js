@@ -216,6 +216,18 @@ $(".nav__item").click(function (e) {
   scrollThere(panels.eq(currentPanel), 500);
 });
 
+$(".mobile-menu .panel__text").click(function (e) {
+  e.preventDefault();
+  var ind = $('.mobile-menu .panel__text').index(this);
+  currentPanel = ind + 1;
+  recentScroll = true;
+  window.setTimeout(() => { recentScroll = false; }, 550);
+  $(".mobile-nav__inner").toggleClass("--active");
+  $(".mobile-menu").toggleClass("--active");
+  $("body").toggleClass("--active");
+  scrollThere(panels.eq(currentPanel), 500);
+});
+
 $(".panel__arrow--down").click(function (e) {
   e.preventDefault();
   currentPanel = 1;
@@ -229,5 +241,4 @@ $(".mobile-nav__inner").on('click', function(event) {
     $(this).toggleClass("--active");
     $(".mobile-menu").toggleClass("--active");
     $("body").toggleClass("--active");
-    console.log($(this).attr("class"));
 });
