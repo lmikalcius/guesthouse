@@ -115,29 +115,65 @@ var carousels = document.getElementsByClassName('carousel');
   }
 });
 
-var longForm = document.getElementById("long-form");
-longForm.addEventListener("submit", function(e) {
+
+var apiKey = "9f4b18b2-03ed-4e9a-8298-3e0756ad4102";
+$("#long-form").submit(function(e) {
   e.preventDefault();
   var formData = new FormData(this);
-  // formData.append("api_key", "9f4b18b2-03ed-4e9a-8298-3e0756ad4102");
-  // var formDataJSON = {};
-  // formData.forEach(function(value, key){
-  //     formDataJSON[key] = value;
-  // });
+  formData.append("api_key", apiKey);
 
-  fetch('https://app.guesthousecorp.com/memberships/api/beta-stays-registration', {
-    method: 'POST',
-    // headers: {
-    //   'Content-Type': 'application/json',
-    // },
-    body: formData,//JSON.stringify(formDataJSON),
-  })
-  .then((response) => response.json())
-  .then((data) => {
-    console.log('Success:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
+  $.ajax({
+    url: "https://app.guesthousecorp.com/memberships/api/beta-stays-registration",
+    type: "post",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (data) {
+      console.log("Success:", data);
+    },
+    error: function (data) {
+      console.log("An error occurred:", data);
+    }
+  });
+});
+
+$("#short-form-one").submit(function(e) {
+  e.preventDefault();
+  var formData = new FormData(this);
+  formData.append("api_key", apiKey);
+
+  $.ajax({
+    url: "https://app.guesthousecorp.com/memberships/api/newsletter-registration",
+    type: "post",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (data) {
+      console.log("Success:", data);
+    },
+    error: function (data) {
+      console.log("An error occurred:", data);
+    }
+  });
+});
+
+$("#short-form-two").submit(function(e) {
+  e.preventDefault();
+  var formData = new FormData(this);
+  formData.append("api_key", apiKey);
+
+  $.ajax({
+    url: "https://app.guesthousecorp.com/memberships/api/newsletter-registration",
+    type: "post",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (data) {
+      console.log("Success:", data);
+    },
+    error: function (data) {
+      console.log("An error occurred:", data);
+    }
   });
 });
 
