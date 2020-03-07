@@ -223,3 +223,9 @@ $(".panel__arrow--down").click(function (e) {
   window.setTimeout(() => { recentScroll = false; }, 550);
   scrollThere(panels.eq(currentPanel), 500);
 });
+
+$(".mobile-nav").on('click', function(event) {
+    event.preventDefault();
+    $(this).toggleClass("is-active");
+    console.log($(this).attr("class"));
+});
