@@ -13,6 +13,7 @@ body {
 h1 {
   font-family: "Noe Display";
   font-style: normal;
+  font-weight: 500;
 }
 
 p, a {
