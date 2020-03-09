@@ -117,6 +117,7 @@ var carousels = document.getElementsByClassName('carousel');
 
 
 var apiKey = "9f4b18b2-03ed-4e9a-8298-3e0756ad4102";
+var successMessage = '<h1 class="panel__text" style="width: 200px;">You&#39;re all set!</h1>';
 $("#long-form").submit(function(e) {
   e.preventDefault();
   var formData = new FormData(this);
@@ -130,6 +131,8 @@ $("#long-form").submit(function(e) {
     contentType: false,
     success: function (data) {
       console.log("Success:", data);
+      $("#long-form input").hide();
+      $("#long-form").append(successMessage);
     },
     error: function (data) {
       console.log("An error occurred:", data);
@@ -150,6 +153,8 @@ $("#short-form-one").submit(function(e) {
     contentType: false,
     success: function (data) {
       console.log("Success:", data);
+      $("#short-form-one input").hide();
+      $("#short-form-one").append(successMessage);
     },
     error: function (data) {
       console.log("An error occurred:", data);
@@ -170,6 +175,8 @@ $("#short-form-two").submit(function(e) {
     contentType: false,
     success: function (data) {
       console.log("Success:", data);
+      $("#short-form-two input").hide();
+      $("#short-form-two").append(successMessage);
     },
     error: function (data) {
       console.log("An error occurred:", data);
