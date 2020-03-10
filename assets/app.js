@@ -202,8 +202,7 @@ window.addEventListener('resize', function() {
 }, true);
 
 function scrollThere(vPanelIndex) {
-  console.log(vMaxCount)
-  if (vCount >= 0 && vPanelIndex < vMaxCount) {
+  if (vPanelIndex >= 0 && vPanelIndex < vMaxCount) {
     vCount = vPanelIndex;
     var verticalCarouselHeight = verticalCarousel.offsetHeight;
     vOffset = verticalCarouselHeight * vCount;
@@ -216,6 +215,14 @@ function scrollThere(vPanelIndex) {
     verticalCarousel.style.transform = "translateY(-" + (vOffset + 150) + "px)";
     vCount = vPanelIndex;
   }
+}
+
+function scrollDown() {
+  scrollThere(vCount + 1);
+}
+
+function scrollUp() {
+  scrollThere(vCount - 1);
 }
 
 // buttons for vCarousel
