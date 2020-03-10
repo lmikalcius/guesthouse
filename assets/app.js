@@ -196,7 +196,6 @@ var vPanelCount = $(".container").length;
 var vOffset = 0;
 var vCount = 0;
 var vMaxCount = vPanelCount - 1;
-var downButton = verticalCarousel.getElementsByClassName("panel__arrow--down")[0];
 
 window.addEventListener('resize', function() {
   scrollThere(vCount);
@@ -207,7 +206,6 @@ function scrollThere(vPanelIndex) {
     scrolling = true;
     setTimeout(function() {
       scrolling = false;
-      console.log("Haven't scrolled in 1600ms!");
     }, 1600)
     if (vPanelIndex >= 0 && vPanelIndex <= vMaxCount) {
       // footer code
@@ -218,6 +216,7 @@ function scrollThere(vPanelIndex) {
         vCount = vPanelIndex;
         return;
       }
+      // rest of page
       vCount = vPanelIndex;
       var verticalCarouselHeight = verticalCarousel.offsetHeight;
       vOffset = verticalCarouselHeight * vCount;
@@ -235,9 +234,18 @@ function scrollUp() {
 }
 
 // buttons for vCarousel
+var downButton = document.getElementsByClassName("panel__arrow--down")[0];
 downButton.addEventListener("click", function() {
   scrollThere(1);
 });
+
+var logo = document.getElementsByClassName("logo")[0];
+logo.addEventListener("click", function() {
+  if (vCount > 0) {
+    scrollThere(0);
+  }
+});
+
 
 var panels = $(".container");
 $(".nav__item").click(function (e) {
