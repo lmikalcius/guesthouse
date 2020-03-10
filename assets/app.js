@@ -33,6 +33,26 @@ var carousels = document.getElementsByClassName('carousel');
     mobileDotsWrapper.appendChild(navDot);
   }
 
+  var touchstartY = 0;
+  var touchendY = 0;
+  carouselWrapper.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+  }, false);
+
+  carouselWrapper.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    handleTouch();
+  }, false);
+
+  function handleTouch() {
+    if (touchendX + 40 < touchstartX) {
+      mobileRightButton.click();
+    }
+    if (touchendX - 40 > touchstartX) {
+      mobileLeftButton.click();
+    }
+  }
+
   window.addEventListener('resize', function() {
     var carouselWidth = carousel.offsetWidth;
     offset = carouselWidth * count;
@@ -121,6 +141,7 @@ var carousels = document.getElementsByClassName('carousel');
 var apiKey = "9f4b18b2-03ed-4e9a-8298-3e0756ad4102";
 var successMessage = '<h1 class="panel__text" style="width: 200px;">You&#39;re all set!</h1>';
 var successMessageMobile = '<h1 class="panel__text" style="width:200px;font-size:24px;line-height:34px;">You&#39;re all set!</h1>';
+var emailUrl = "https://app.guesthousecorp.com/memberships/api/newsletter-registration";
 $("#long-form").submit(function(e) {
   e.preventDefault();
   var formData = new FormData(this);
@@ -149,7 +170,7 @@ $("#short-form-one").submit(function(e) {
   formData.append("api_key", apiKey);
 
   $.ajax({
-    url: "https://app.guesthousecorp.com/memberships/api/newsletter-registration",
+    url: emailUrl,
     type: "post",
     data: formData,
     processData: false,
@@ -171,7 +192,7 @@ $("#short-form-two").submit(function(e) {
   formData.append("api_key", apiKey);
 
   $.ajax({
-    url: "https://app.guesthousecorp.com/memberships/api/newsletter-registration",
+    url: emailUrl,
     type: "post",
     data: formData,
     processData: false,
@@ -193,7 +214,7 @@ $("#persistent-form-one").submit(function(e) {
   formData.append("api_key", apiKey);
 
   $.ajax({
-    url: "https://app.guesthousecorp.com/memberships/api/newsletter-registration",
+    url: emailUrl,
     type: "post",
     data: formData,
     processData: false,
@@ -215,7 +236,7 @@ $("#persistent-form-two").submit(function(e) {
   formData.append("api_key", apiKey);
 
   $.ajax({
-    url: "https://app.guesthousecorp.com/memberships/api/newsletter-registration",
+    url: emailUrl,
     type: "post",
     data: formData,
     processData: false,
@@ -299,8 +320,6 @@ $(".nav__item").click(function (e) {
   e.preventDefault();
   var ind = $('.nav__item').index(this);
   currentPanel = ind + 1;
-  // recentScroll = true;
-  // window.setTimeout(() => { recentScroll = false; }, 550);
   scrollThere(currentPanel);
 });
 
@@ -309,8 +328,6 @@ $(".mobile-menu .panel__text").on("click", function (e) {
   e.preventDefault();
   var ind = $('.mobile-menu .panel__text').index(this);
   currentPanel = ind + 1;
-  // recentScroll = true;
-  // window.setTimeout(() => { recentScroll = false; }, 550);
   $(".mobile-nav__inner").toggleClass("--active");
   $(".mobile-menu").toggleClass("--active");
   $("body").toggleClass("--active");
@@ -328,14 +345,14 @@ $(".mobile-nav__inner").on('click', function(event) {
 // END MOBILE NAV MENU CODE
 
 // ALL SCROLL EVENTS
-
+// mousewheel and tackpad
 window.addEventListener('wheel', function(e){
   event.deltaY > 0 ? scrollDown() : scrollUp();
 });
 
+// mobile touch
 var touchstartY = 0;
 var touchendY = 0;
-
 document.addEventListener('touchstart', function(event) {
   touchstartY = event.changedTouches[0].screenY;
 }, false);
@@ -346,14 +363,15 @@ document.addEventListener('touchend', function(event) {
 }, false);
 
 function handleTouch() {
-  if (touchendY + 10 < touchstartY) {
+  if (touchendY + 15 < touchstartY) {
     scrollDown();
   }
-  if (touchendY - 10 > touchstartY) {
+  if (touchendY - 15 > touchstartY) {
     scrollUp();
   }
 }
 
+// close persistent form
 $(".x").on("click", function() {
   $(".persistent-form.--desktop").hide();
 });
