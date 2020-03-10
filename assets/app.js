@@ -189,15 +189,40 @@ $("#short-form-two").submit(function(e) {
 
 
 
+// VERTICAL SCROLLING CAROUSEL
+var verticalCarousel = document.getElementById('vertical-carousel__content');
+var vPanelCount = $(".container").length;
+var vOffset = 0;
+var vCount = 0;
+var vMaxCount = vPanelCount - 1;
+var downButton = verticalCarousel.getElementsByClassName("panel__arrow--down")[0];
 
-// var currentPanel = 0;
-// var panels = $(".container");
-// var recentScroll = false;
+window.addEventListener('resize', function() {
+  scrollThere(vCount);
+}, true);
+
+function scrollThere(vPanelIndex) {
+  console.log(vMaxCount)
+  if (vCount >= 0 && vPanelIndex < vMaxCount) {
+    vCount = vPanelIndex;
+    var verticalCarouselHeight = verticalCarousel.offsetHeight;
+    vOffset = verticalCarouselHeight * vCount;
+    verticalCarousel.style.transform = "translateY(-" + vOffset + "px)";
+  }
+  // footer code
+  if (vPanelIndex == vMaxCount) {
+    var verticalCarouselHeight = verticalCarousel.offsetHeight;
+    vOffset = verticalCarouselHeight * (vMaxCount - 1);
+    verticalCarousel.style.transform = "translateY(-" + (vOffset + 150) + "px)";
+    vCount = vPanelIndex;
+  }
+}
+
+downButton.addEventListener("click", function() {
+  scrollThere(1);
+});
 
 
-// function scrollThere(targetElement, speed) {
-//   $('html, body').stop().animate( { scrollTop: targetElement.offset().top }, speed);
-// }
 
 // var lastScrollTop = 0;
 // $(window).scroll(function(event){
@@ -259,26 +284,3 @@ $(".mobile-nav__inner").on('click', function(event) {
     $("body").toggleClass("--active");
 });
 // END MOBILE NAV MENU CODE
-
-
-var verticalCarousel = document.getElementById('vertical-carousel__content');
-var vPanelCount = $(".container").length;
-var vOffset = 0;
-var vCount = 0;
-var vMaxCount = vPanelCount - 1;
-var downButton = verticalCarousel.getElementsByClassName("panel__arrow--down")[0];
-
-// window.addEventListener('resize', function() {
-//   var carouselWidth = carousel.offsetWidth;
-//   offset = carouselWidth * count;
-//   carousel.style.transform = "translateX(-" + offset + "px)";
-// }, true);
-
-downButton.addEventListener("click", function() {
-  if (vCount == 0) {
-    vCount++;
-    var verticalCarouselHeight = verticalCarousel.offsetHeight;
-    vOffset = verticalCarouselHeight * vCount;
-    verticalCarousel.style.transform = "translateY(-" + vOffset + "px)";
-  }
-});
