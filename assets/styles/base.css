@@ -6,6 +6,10 @@ body {
   height: 100%;
 }
 
+body {
+  overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
