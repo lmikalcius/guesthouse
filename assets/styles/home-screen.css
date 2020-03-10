@@ -15,6 +15,9 @@
     width: calc(100% * 10/12);
     max-width: 1200px;
     z-index: 1;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   /* Used to make the nav items take up the whole width */
@@ -62,8 +65,9 @@
 
 @media only screen and (min-width: 1024px) {
   .logo {
+    cursor: pointer;
     position: absolute;
-    left: 0;
+    left: calc(100% * 1/12);
     top: 40px;
     max-width: 187px;
   }

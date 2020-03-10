@@ -50,6 +50,7 @@
   color: #FFFFFF;
   margin-top: 10px;
   -webkit-appearance: none;
+  cursor: pointer;
 }
 
 .email-signup__submit.--membership {
