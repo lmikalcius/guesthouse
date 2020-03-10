@@ -1,5 +1,9 @@
-/* desktop nav hiden on mobile */
+/* desktop nav hidden on mobile */
 .nav {
+  display: none;
+}
+
+.nav.--hidden {
   display: none;
 }
 
