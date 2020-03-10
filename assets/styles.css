@@ -13,6 +13,8 @@
 @import url("styles/details.css");
 @import url("styles/long-form.css");
 @import url("styles/mobile-nav.css");
+@import url("styles/vertical-carousel.css");
+
 
 .panel .--semi-bold {
   font-family: "Proxima Nova Semi Bold";

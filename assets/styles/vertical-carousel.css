@@ -1,0 +1,8 @@
+#vertical-carousel {
+  overflow: hidden;
+  height: 100%;
+}
+
+#vertical-carousel__content {
+  height: 100%;
+}
