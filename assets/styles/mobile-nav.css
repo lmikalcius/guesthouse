@@ -19,7 +19,7 @@
 }
 
 .mobile-menu .panel__text {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .mobile-menu .panel__text:first-of-type {
@@ -28,4 +28,48 @@
 
 body.--active {
   overflow: hidden;
+}
+
+.persistent-form {
+  position: absolute;
+  bottom: 20px;
+}
+
+.persistent-form .email-signup__input {
+  display: inline-block;
+  width: 235px;
+  margin-right: 6px;
+}
+
+.persistent-form .email-signup__submit {
+  display: inline-block;
+  width: 100px;
+}
+
+.persistent-form.--desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .persistent-form.--desktop {
+    display: block;
+    background-color: #333333;
+    padding: 15px;
+    z-index: 1;
+    top: 0;
+    left: calc(100% * 7/12);
+    width: 375px;
+    height: 135px;
+  }
+
+  .persistent-form.--desktop .panel__text:first-of-type {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  .persistent-form.--desktop .email-signup__input {
+    margin-top: 0;
+  }
 }
