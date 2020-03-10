@@ -72,4 +72,10 @@ body.--active {
   .persistent-form.--desktop .email-signup__input {
     margin-top: 0;
   }
+
+  .x {
+    position: absolute;
+    right: 15;
+    cursor: pointer;
+  }
 }

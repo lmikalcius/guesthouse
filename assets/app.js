@@ -353,3 +353,7 @@ function handleTouch() {
     scrollUp();
   }
 }
+
+$(".x").on("click", function() {
+  $(".persistent-form.--desktop").hide();
+});
