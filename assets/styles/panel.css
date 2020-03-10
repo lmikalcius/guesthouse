@@ -84,7 +84,7 @@
 .panel__text.--smaller-text {
   font-size: 16px;
   line-height: 20px;
-  margin-top: 0;
+  margin-top: 10PX;
 }
 
 @media only screen and (min-width: 1024px) {

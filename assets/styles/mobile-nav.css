@@ -18,6 +18,14 @@
   left: 0;
 }
 
+.mobile-menu .panel__text {
+  margin-top: 40px;
+}
+
+.mobile-menu .panel__text:first-of-type {
+  margin-top: 0px;
+}
+
 body.--active {
   overflow: hidden;
 }

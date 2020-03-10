@@ -11,7 +11,7 @@
 }
 
 .panel.panel--description-fourth {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/description-fourth.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),url("../images/description-fourth.png");
 }
 
 .panel.panel--description-fifth {
@@ -19,7 +19,7 @@
 }
 
 .panel.panel--description-sixth {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/description-sixth.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),url("../images/description-sixth.png");
 }
 
 .panel.panel--description-seventh {
@@ -34,6 +34,6 @@
 @media only screen and (min-width: 1024px) {
   .panel.panel--description .panel__header {
     font-size: 50px;
-    line-height: 65px;
+    line-height: 66px;
   }
 }
