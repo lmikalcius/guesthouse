@@ -210,6 +210,7 @@ function scrollThere(vPanelIndex) {
     if (vPanelIndex >= 0 && vPanelIndex <= vMaxCount) {
       // footer code
       if (vPanelIndex == vMaxCount) {
+        $(".nav").hide();
         var verticalCarouselHeight = verticalCarousel.offsetHeight;
         vOffset = verticalCarouselHeight * (vMaxCount - 1);
         verticalCarousel.style.transform = "translateY(-" + (vOffset + 150) + "px)";
@@ -217,6 +218,7 @@ function scrollThere(vPanelIndex) {
         return;
       }
       // rest of page
+      $(".nav").show();
       vCount = vPanelIndex;
       var verticalCarouselHeight = verticalCarousel.offsetHeight;
       vOffset = verticalCarouselHeight * vCount;
