@@ -26,6 +26,10 @@
   margin-top: 0px;
 }
 
+.mobile-menu .panel__text.--active {
+  color: #B5814B;
+}
+
 body.--active {
   overflow: hidden;
 }

@@ -42,6 +42,10 @@
     color: #FFFFFF;
     font-family: "Proxima Nova Semi Bold";
   }
+
+  .nav__item.--active {
+    border-bottom: 5px solid #B5814B;
+  }
 }
 
 /* mobile-nav */
