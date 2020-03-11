@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
   // binding action to sign up text in beta stays panel
-  function scrollToSignUp() {
-    var rightArrow = document.getElementById("beta-stays").getElementsByClassName("panel__right-arrow")[0];
+  $(".--toSignup").on("click", function() {
+    var rightArrow = $("#beta-stays .panel__right-arrow").eq(0);
     for (var i = 0; i < 3; i++) {
       rightArrow.click();
     }
-  }
+  })
 
   //  HORIZONTAL CAROUSEL CODE - use forEach to create closures to hold variable state for listeners
   var carousels = document.getElementsByClassName('carousel');
