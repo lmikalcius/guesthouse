@@ -32,8 +32,13 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .panel.panel--description .panel__header {
+  #description .panel .panel__header {
     font-size: 50px;
     line-height: 66px;
+    margin: 0;
+  }
+
+  #description .panel .--margin-top-none {
+    margin-top: 0;
   }
 }

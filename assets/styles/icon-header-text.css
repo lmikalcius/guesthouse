@@ -5,7 +5,9 @@
 
 @media only screen and (min-width: 1024px) {
   .panel--icon-header-text .panel__content {
-    padding-top: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -44,6 +46,6 @@
   .--icon-hidden-mobile .panel__header {
     font-size: 35px;
     line-height: 50px;
-    margin-top: 85px;
+    margin-top: 65px;
   }
 }
