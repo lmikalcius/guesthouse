@@ -74,10 +74,8 @@
 @media only screen and (min-width: 1024px) {
   .logo {
     cursor: pointer;
-    position: absolute;
-    left: calc(100% * 1/12);
-    top: 40px;
     max-width: 187px;
+    position: static;
   }
 }
 
@@ -178,4 +176,18 @@
   -webkit-transform: translateY(-3px) translateX(0px) rotate(45deg);
   -ms-transform: translateY(-3px) translateX(0px) rotate(45deg);
   transform: translateY(-3px) translateX(0px) rotate(45deg);
+}
+
+@media only screen and (min-width: 1024px) {
+  .sticky-top {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% * 10/12);
+    max-width: 1200px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
 }

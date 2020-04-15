@@ -59,11 +59,9 @@ body.--active {
     display: block;
     background-color: #333333;
     padding: 15px;
-    z-index: 1;
-    top: 0;
-    left: calc(100% * 7/12);
     width: 375px;
     height: 135px;
+    position: static;
   }
 
   .persistent-form.--desktop .panel__text:first-of-type {
