@@ -349,9 +349,9 @@ $(document).ready(function(){
 
 
   // MOBILE NAV MENU CODE
-  $(".mobile-nav__inner").on('click', function(event) {
+  $(".mobile-nav").on('click', function(event) {
       event.preventDefault();
-      $(this).toggleClass("--active");
+      $(".mobile-nav__inner").toggleClass("--active");
       $(".mobile-menu").toggleClass("--active");
       $("body").toggleClass("--active");
   });
